@@ -1,2 +1,4 @@
 # luxeboostvault.github.io
-LuxeboostVault — Agentic Automation Systems for Institutional Operators
+Agentic automation systems for institutional operators.
+Application-only engagements. Maximum four clients per quarter.
+Visit: https://luxeboostvault.github.io
