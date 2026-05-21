@@ -695,22 +695,27 @@
         <p class="sub">We operate with a maximum of four active client engagements per quarter. Applications are reviewed within 48 hours. If there is no strategic fit, we will tell you directly.</p>
       </div>
       <div class="form-wrap reveal">
-        <form id="auditForm">
-          <div class="form-grid">
-            <div class="form-row">
-              <label>Organisation Name</label>
-              <input type="text" placeholder="Acme Agency Ltd" required />
-            </div>
-            <div class="form-row">
-              <label>Your Role / Title</label>
-              <input type="text" placeholder="Managing Director" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <label>Primary Inefficiency to Resolve</label>
-            <textarea placeholder="Describe the operational bottleneck you are attempting to eliminate..." required></textarea>
-          </div>
-          <div class="form-row">
+       <form id="auditForm" action="https://formspree.io/f/xpqndyjq" method="POST">
+  <div class="form-grid">
+    <div class="form-row">
+      <label>Organisation Name</label>
+      <input type="text" name="organisation" placeholder="Acme Agency Ltd" required />
+    </div>
+    <div class="form-row">
+      <label>Your Role / Title</label>
+      <input type="text" name="role" placeholder="Managing Director" required />
+    </div>
+  </div>
+  <div class="form-row">
+    <label>Primary Inefficiency to Resolve</label>
+    <textarea name="inefficiency" placeholder="Describe the operational bottleneck..." required></textarea>
+  </div>
+  <div class="form-row">
+    <label>Email Address</label>
+    <input type="email" name="email" placeholder="email@company.com" required />
+  </div>
+  <button type="submit" class="form-submit">Submit</button>
+</form>
             <label>Target Outcome Within 90 Days</label>
             <textarea placeholder="What does success look like at the 90-day mark?" required></textarea>
           </div>
@@ -781,11 +786,11 @@
     });
     if (bentoCards.length) bentoObs.observe(bentoCards[0].parentElement);
 
-    // Form submit
+  // Form submit
     document.getElementById('auditForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+      // e.preventDefault();  // This line is now DISABLED
       const btn = this.querySelector('.form-submit');
-      btn.textContent = 'Application Received. We Will Be In Touch.';
+      btn.textContent = 'Sending...';
       btn.style.background = '#00CC44';
       btn.disabled = true;
     });
