@@ -714,22 +714,24 @@
     <label>Email Address</label>
     <input type="email" name="email" placeholder="email@company.com" required />
   </div>
-  <button type="submit" class="form-submit">Submit</button>
-</form>
+  <div class="form-row">
             <label>Target Outcome Within 90 Days</label>
-            <textarea placeholder="What does success look like at the 90-day mark?" required></textarea>
+            <textarea name="outcome" placeholder="What does success look like at the 90-day mark?" required></textarea>
           </div>
           <div class="form-grid">
             <div class="form-row">
               <label>Monthly Systems Budget</label>
-              <select required>
+              <select name="budget" required>
                 <option value="" disabled selected>Select range</option>
-                <option>Under £2,000</option>
-                <option>£2,000 – £5,000</option>
-                <option>£5,000 – £15,000</option>
-                <option>£15,000+</option>
+                <option value=""Under 2k">Under £2,000</option>
+                <option value>"2k_5k">£2,000 – £5,000</option>
+                <option value="5k_15k">£5,000 – £15,000</option>
+                <option value="15k_plus">£15,000+</option>
               </select>
             </div>
+            </div>
+         <button type="submit" class="form-submit">Submit Application →</button>
+         </form>
             <div class="form-row">
               <label>How Did You Locate Us?</label>
               <input type="text" placeholder="LinkedIn, referral, search..." />
